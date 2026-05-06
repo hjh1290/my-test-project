@@ -4,17 +4,46 @@
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>홈페이지 새 시작</title>
+  <title>NEON PROTOCOL // GitHub 정복기</title>
   <style>
-    body { font-family: system-ui, -apple-system, sans-serif; margin: 40px; line-height: 1.6; }
-    .card { max-width: 720px; padding: 24px; border: 1px solid #ddd; border-radius: 12px; }
+    :root { --bg:#07090f; --panel:#0c1326cc; --cyan:#5ff6ff; --pink:#ff4fd8; --lime:#8bff7a; --text:#d8ecff; --muted:#7ea1bf; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Segoe UI","Noto Sans KR",system-ui,sans-serif;color:var(--text);background:linear-gradient(180deg,#0a0f1f,var(--bg));min-height:100vh;padding:40px 18px}
+    .container{width:min(1080px,92vw);margin:0 auto}
+    .tag{display:inline-block;padding:6px 12px;border:1px solid #5ff6ff77;border-radius:999px;color:var(--cyan);box-shadow:0 0 18px #5ff6ff55}
+    h1{margin-top:16px;font-size:clamp(2rem,5vw,3.8rem);text-shadow:0 0 18px #5ff6ff66,0 0 34px #ff4fd844}
+    .subtitle{margin-top:12px;color:var(--muted)}
+    .grid{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .card{background:var(--panel);border:1px solid #5ff6ff40;border-radius:14px;padding:16px}
+    .step{display:inline-block;margin-bottom:8px;padding:4px 8px;border:1px solid #8bff7a77;border-radius:8px;color:var(--lime);font-size:.78rem}
+    .card h2{font-size:1rem;margin-bottom:8px}
+    .card p{color:#9fc2dd;font-size:.93rem;line-height:1.6}
+    .log{margin-top:14px;background:#070c18cc;border:1px solid #5ff6ff40;border-radius:14px;padding:16px}
+    .log h3{color:var(--cyan);margin-bottom:10px}
+    .log li{margin-left:18px;margin-bottom:7px;color:#b7d4eb}
+    .log b{color:#ffd166}
+    footer{margin-top:16px;text-align:center;color:#6f8aa3;font-size:.85rem}
   </style>
 </head>
 <body>
-  <main class="card">
-    <h1>홈페이지를 새로 시작했습니다.</h1>
-    <p>이 파일은 UTF-8 기준 템플릿입니다.</p>
-    <p>원하는 디자인을 이제 다시 붙여 넣으면 됩니다.</p>
+  <main class="container">
+    <span class="tag">NEON MODE ON</span>
+    <h1>GITHUB 정복기<br />사이버 로그북</h1>
+    <p class="subtitle">원격 저장소 연결부터 인증 문제 해결까지, 오늘의 GitHub 전투 기록을 네온 시티 감성으로 정리한 페이지입니다.</p>
+    <section class="grid">
+      <article class="card"><span class="step">STEP // 01</span><h2>원격 저장소 연결</h2><p>로컬 프로젝트를 GitHub 원격 저장소와 연결하고 저장소 URL 정확성을 확인했습니다.</p></article>
+      <article class="card"><span class="step">STEP // 02</span><h2>인증 문제 돌파</h2><p>권한 오류를 추적해 인증 방식을 바로잡고 접근 흐름을 안정화했습니다.</p></article>
+      <article class="card"><span class="step">STEP // 03</span><h2>최종 푸시 완료</h2><p>브랜치 기록을 정리한 뒤 첫 푸시를 완료하고 원격 동기화를 확인했습니다.</p></article>
+    </section>
+    <section class="log">
+      <h3>에러 추적 로그</h3>
+      <ol>
+        <li><b>repository not found</b> - URL 오타를 수정하고 저장소 권한을 다시 확인</li>
+        <li><b>permission denied</b> - 인증 설정을 점검하고 접근 방식을 전환</li>
+        <li><b>non-fast-forward</b> - 원격 변경사항 동기화 후 충돌 해결, 재푸시</li>
+      </ol>
+    </section>
+    <footer>신호 수신: "에러는 적이 아니라 디버깅 힌트다."</footer>
   </main>
 </body>
 </html>
